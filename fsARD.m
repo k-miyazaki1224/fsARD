@@ -105,7 +105,7 @@ function [varargout] = fsARD(G,D,Se,b_init,ag_init, group, wp, ag0, Ntrain,run,t
                     maxval = maxval * 1e-1;
                     loop = true;
                     disp(sprintf('Restart by maxval %e',maxval))
-                    [J,ag_all,D1_all,C1_all,b_all,gamma_a,J_all,Sj_all,gamma_all] = groupARD_edKM_ori2_oy_c_fast3_edKM(G,D,Se,b_init,ag_init, group, wp, ag0, Ntrain,run,trial,maxval);
+                    [J,ag_all,D1_all,C1_all,b_all,gamma_a,J_all,Sj_all,gamma_all] = fsARD(G,D,Se,b_init,ag_init, group, wp, ag0, Ntrain,run,trial,maxval);
                     break
                 end
             end
